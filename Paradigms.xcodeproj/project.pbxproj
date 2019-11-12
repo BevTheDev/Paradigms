@@ -17,6 +17,11 @@
 		96A679D7237B33DC0011D883 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A679D5237B33DC0011D883 /* HomeViewController.swift */; };
 		96A679D8237B33DC0011D883 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96A679D6237B33DC0011D883 /* HomeViewController.xib */; };
 		96A679DA237B34B40011D883 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96A679D9237B34B40011D883 /* LaunchScreen.xib */; };
+		96A679DE237B3E5C0011D883 /* ExampleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A679DC237B3E5C0011D883 /* ExampleCell.swift */; };
+		96A679DF237B3E5C0011D883 /* ExampleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96A679DD237B3E5C0011D883 /* ExampleCell.xib */; };
+		96A679E4237B42510011D883 /* DateExamplesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A679E2237B42510011D883 /* DateExamplesViewController.swift */; };
+		96A679E5237B42510011D883 /* DateExamplesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96A679E3237B42510011D883 /* DateExamplesViewController.xib */; };
+		96A679EB237B438C0011D883 /* DateFormatter+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A679EA237B438C0011D883 /* DateFormatter+Convenience.swift */; };
 		BEEA56E837E819E65AC8F546 /* Pods_ParadigmsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02909CCB2BFBD8F5601C9955 /* Pods_ParadigmsTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +64,11 @@
 		96A679D5237B33DC0011D883 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		96A679D6237B33DC0011D883 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		96A679D9237B34B40011D883 /* LaunchScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		96A679DC237B3E5C0011D883 /* ExampleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleCell.swift; sourceTree = "<group>"; };
+		96A679DD237B3E5C0011D883 /* ExampleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExampleCell.xib; sourceTree = "<group>"; };
+		96A679E2237B42510011D883 /* DateExamplesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExamplesViewController.swift; sourceTree = "<group>"; };
+		96A679E3237B42510011D883 /* DateExamplesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateExamplesViewController.xib; sourceTree = "<group>"; };
+		96A679EA237B438C0011D883 /* DateFormatter+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Convenience.swift"; sourceTree = "<group>"; };
 		D57BB4194252106699463FB3 /* Pods-Paradigms.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Paradigms.release.xcconfig"; path = "Target Support Files/Pods-Paradigms/Pods-Paradigms.release.xcconfig"; sourceTree = "<group>"; };
 		D5F9C977558B09FD8AB48DE2 /* Pods-Paradigms.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Paradigms.debug.xcconfig"; path = "Target Support Files/Pods-Paradigms/Pods-Paradigms.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -139,6 +149,7 @@
 		96A6799F237B2B320011D883 /* Paradigms */ = {
 			isa = PBXGroup;
 			children = (
+				96A679E6237B43330011D883 /* Utility */,
 				96A679D4237B33BB0011D883 /* View Controllers */,
 				96A679D3237B31F40011D883 /* Models */,
 				96A679DB237B35460011D883 /* Resources */,
@@ -177,8 +188,8 @@
 		96A679D4237B33BB0011D883 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				96A679D5237B33DC0011D883 /* HomeViewController.swift */,
-				96A679D6237B33DC0011D883 /* HomeViewController.xib */,
+				96A679E1237B422B0011D883 /* Examples */,
+				96A679E0237B421C0011D883 /* Home */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -190,6 +201,42 @@
 				96A679D9237B34B40011D883 /* LaunchScreen.xib */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		96A679E0237B421C0011D883 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				96A679D5237B33DC0011D883 /* HomeViewController.swift */,
+				96A679D6237B33DC0011D883 /* HomeViewController.xib */,
+				96A679DC237B3E5C0011D883 /* ExampleCell.swift */,
+				96A679DD237B3E5C0011D883 /* ExampleCell.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		96A679E1237B422B0011D883 /* Examples */ = {
+			isa = PBXGroup;
+			children = (
+				96A679E2237B42510011D883 /* DateExamplesViewController.swift */,
+				96A679E3237B42510011D883 /* DateExamplesViewController.xib */,
+			);
+			path = Examples;
+			sourceTree = "<group>";
+		};
+		96A679E6237B43330011D883 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				96A679E7237B433A0011D883 /* Extensions */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		96A679E7237B433A0011D883 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				96A679EA237B438C0011D883 /* DateFormatter+Convenience.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,6 +349,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96A679DF237B3E5C0011D883 /* ExampleCell.xib in Resources */,
+				96A679E5237B42510011D883 /* DateExamplesViewController.xib in Resources */,
 				96A679AD237B2B330011D883 /* Assets.xcassets in Resources */,
 				96A679DA237B34B40011D883 /* LaunchScreen.xib in Resources */,
 				96A679D8237B33DC0011D883 /* HomeViewController.xib in Resources */,
@@ -449,6 +498,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96A679EB237B438C0011D883 /* DateFormatter+Convenience.swift in Sources */,
+				96A679DE237B3E5C0011D883 /* ExampleCell.swift in Sources */,
+				96A679E4237B42510011D883 /* DateExamplesViewController.swift in Sources */,
 				96A679A1237B2B320011D883 /* AppDelegate.swift in Sources */,
 				96A679AB237B2B320011D883 /* Paradigms.xcdatamodeld in Sources */,
 				96A679D7237B33DC0011D883 /* HomeViewController.swift in Sources */,

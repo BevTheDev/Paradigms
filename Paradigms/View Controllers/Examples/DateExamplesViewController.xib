@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DateExamplesViewController" customModule="Paradigms" customModuleProvider="target">
+            <connections>
+                <outlet property="friendlyFormatLabel" destination="MsR-7Q-6Fk" id="nnc-8q-DDg"/>
+                <outlet property="isoFormatLabel" destination="nzm-bJ-qz8" id="duH-lc-kK6"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current date (month/day/year format):" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9P8-uN-OhQ">
+                    <rect key="frame" x="20" y="64" width="374" height="21"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current date (iso8601 format):" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HD3-xa-be6">
+                    <rect key="frame" x="20" y="156" width="374" height="21"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MsR-7Q-6Fk">
+                    <rect key="frame" x="20" y="95" width="374" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nzm-bJ-qz8">
+                    <rect key="frame" x="20" y="187" width="374" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="MsR-7Q-6Fk" secondAttribute="trailing" constant="20" id="0kQ-vu-USZ"/>
+                <constraint firstItem="nzm-bJ-qz8" firstAttribute="top" secondItem="HD3-xa-be6" secondAttribute="bottom" constant="10" id="5b7-Lb-mIz"/>
+                <constraint firstItem="9P8-uN-OhQ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="BAU-Tt-puv"/>
+                <constraint firstItem="HD3-xa-be6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Btt-FW-QUS"/>
+                <constraint firstItem="MsR-7Q-6Fk" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="IPu-m3-LDO"/>
+                <constraint firstItem="9P8-uN-OhQ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Nta-Xc-20G"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="HD3-xa-be6" secondAttribute="trailing" constant="20" id="OOd-3S-jL6"/>
+                <constraint firstItem="nzm-bJ-qz8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="crM-eb-j5H"/>
+                <constraint firstItem="HD3-xa-be6" firstAttribute="top" secondItem="MsR-7Q-6Fk" secondAttribute="bottom" constant="40" id="hJf-DG-f7v"/>
+                <constraint firstItem="MsR-7Q-6Fk" firstAttribute="top" secondItem="9P8-uN-OhQ" secondAttribute="bottom" constant="10" id="lFQ-6o-FbT"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="nzm-bJ-qz8" secondAttribute="trailing" constant="20" id="lpb-0W-5f2"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="9P8-uN-OhQ" secondAttribute="trailing" constant="20" id="uX8-wr-YYJ"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="139" y="81"/>
+        </view>
+    </objects>
+</document>
