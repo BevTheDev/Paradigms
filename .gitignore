@@ -1,0 +1,36 @@
+# Generated
+Paradigms/Generated/*.swift
+Paradigms/Generated/*.h
+
+# CocoaPods
+Pods/
+
+# OS X
+.DS_Store
+
+# Xcode
+build/
+xcuserdata/
+*.xccheckout
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+!default.pbxuser
+!default.mode1v3
+!default.mode2v3
+!default.perspectivev3
+*.xcscmblueprint
+
+# SPM
+.build/
+
+# Slather
+bin/
+html/
+
+# Fastlane (if using)
+fastlane/report.xml
+test-reports/
+*.dSYM.zip
+*.ipa
