@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		20E92F31745F35926D931CA0 /* Pods_Paradigms.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32B4D6BBDF26EAB5353E7EC4 /* Pods_Paradigms.framework */; };
 		775A072F6383965E6648E9B2 /* Pods_ParadigmsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09FA7C58C395F32F578D7E7D /* Pods_ParadigmsUITests.framework */; };
+		967D5BF223A99D3A00031097 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967D5BF123A99D3A00031097 /* WebService.swift */; };
 		96867C18237B4E7800221C73 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96867C17237B4E7800221C73 /* Environment.swift */; };
 		96867C1C237B502400221C73 /* MockEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96867C1B237B502400221C73 /* MockEnvironment.swift */; };
 		96867C1E237B510400221C73 /* Date+Creation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96867C1D237B510400221C73 /* Date+Creation.swift */; };
@@ -54,6 +55,7 @@
 		32B4D6BBDF26EAB5353E7EC4 /* Pods_Paradigms.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Paradigms.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5382985449E29F21A17B5870 /* Pods-ParadigmsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParadigmsUITests.release.xcconfig"; path = "Target Support Files/Pods-ParadigmsUITests/Pods-ParadigmsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		6B2117BADE80CFB9162B3AD9 /* Pods-ParadigmsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParadigmsUITests.debug.xcconfig"; path = "Target Support Files/Pods-ParadigmsUITests/Pods-ParadigmsUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		967D5BF123A99D3A00031097 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		96867C17237B4E7800221C73 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		96867C1B237B502400221C73 /* MockEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockEnvironment.swift; sourceTree = "<group>"; };
 		96867C1D237B510400221C73 /* Date+Creation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Creation.swift"; sourceTree = "<group>"; };
@@ -132,6 +134,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		967D5BF023A99CB100031097 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				967D5BF123A99D3A00031097 /* WebService.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		96867C16237B4E6800221C73 /* Environment */ = {
 			isa = PBXGroup;
 			children = (
@@ -181,6 +191,7 @@
 		96A6799F237B2B320011D883 /* Paradigms */ = {
 			isa = PBXGroup;
 			children = (
+				967D5BF023A99CB100031097 /* Networking */,
 				96867C16237B4E6800221C73 /* Environment */,
 				96A679E6237B43330011D883 /* Utility */,
 				96A679D4237B33BB0011D883 /* View Controllers */,
@@ -540,6 +551,7 @@
 				96A679E4237B42510011D883 /* DateExamplesViewController.swift in Sources */,
 				96867C18237B4E7800221C73 /* Environment.swift in Sources */,
 				96867C1E237B510400221C73 /* Date+Creation.swift in Sources */,
+				967D5BF223A99D3A00031097 /* WebService.swift in Sources */,
 				96A679A1237B2B320011D883 /* AppDelegate.swift in Sources */,
 				96A679AB237B2B320011D883 /* Paradigms.xcdatamodeld in Sources */,
 				96A679D7237B33DC0011D883 /* HomeViewController.swift in Sources */,
