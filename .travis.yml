@@ -1,4 +1,5 @@
 language: swift
+osx_image: xcode11.1
 xcode_workspace: Paradigms.xcworkspace
 xcode_scheme: Paradigms
 xcode_destination: platform=iOS Simulator,OS=13.0,name=iPhone 11
