@@ -10,6 +10,7 @@ env:
   matrix:
     - DESTINATION="OS=12.0,name=iPhone X" SCHEME="$IOS_FRAMEWORK_SCHEME" SDK="$IOS_SDK"
 before_install:
+  - gem install bundler -v 2.0.1
   - bundle install --without=documentation
   - bundle exec pod repo update
   - bundle exec pod install
