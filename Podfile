@@ -49,9 +49,4 @@ target 'Paradigms' do
     pod 'MetovaTestKit'
     common_test_pods
   end
-
-  target 'ParadigmsUITests' do
-    inherit! :search_paths
-    common_test_pods
-  end
 end
