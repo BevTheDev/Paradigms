@@ -8,11 +8,13 @@
 
 import UIKit
 
-class PostsViewController: UIViewController {
+class PostsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    @IBOutlet weak var tableView: UITableView!
     
     var posts: [Post] = [] {
         didSet {
-            print("\(posts)")
+            tableView.reloadData()
         }
     }
     
@@ -42,4 +44,20 @@ class PostsViewController: UIViewController {
         }
     }
 
+    // MARK: - Tableview Methods
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return posts.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let reuseIdentifier = "cell"
+        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier) ?? UITableViewCell(style: .default, reuseIdentifier: reuseIdentifier)
+        
+        cell.textLabel?.text = posts[indexPath.row].title
+        
+        return cell
+    }
 }
