@@ -8,16 +8,14 @@
 
 import Alamofire
 
-public typealias JSON = [String: Any]
-
-enum WebResponse {
-    case success(JSON?)
+enum WebResponse<T> {
+    case success(T)
     case failure(String)
 }
 
 class WebService {
-    
-    static func sendRequest(urlString: String, method: HTTPMethod, completion: @escaping (WebResponse) -> Void) {
+
+    static func sendRequest(urlString: String, method: HTTPMethod, completion: @escaping (WebResponse<Data>) -> Void) {
         
         guard let url = URL(string: urlString) else {
             completion(.failure("Bad URL"))
@@ -28,12 +26,7 @@ class WebService {
             
             switch (response.data, response.error) {
             case (let data?, _):
-                if let json = convertToJSON(data) {
-                    completion(.success(json))
-                }
-                else {
-                    completion(.failure("Nil response"))
-                }
+                completion(.success(data))
                 
             case (_, let error?):
                 completion(.failure(error.localizedDescription))
@@ -42,23 +35,5 @@ class WebService {
                 completion(.failure("An unknown error occured."))
             }
         }
-    }
-    
-    // MARK: - Helpers
-    
-    static func convertToJSON(_ data: Data) -> JSON? {
-        
-        var jsonResult: JSON?
-        
-        do {
-            if let json = try JSONSerialization.jsonObject(with: data, options: []) as? JSON {
-                jsonResult = json
-            }
-        }
-        catch {
-            // TODO: log an error
-        }
-        
-        return jsonResult
     }
 }
