@@ -1,5 +1,3 @@
-# Paradigms
-
 <p align="left">
  <a href="https://travis-ci.com/BevTheDev/Paradigms/" target="_blank"><img src="https://travis-ci.com/BevTheDev/Paradigms.svg?branch=master" alt="Build Status"></a> 
 </p>
@@ -12,9 +10,9 @@ Example coding/testing patterns to make your life easier.
 
 -----
 
-## Test Patterns
+# Test Patterns
 
-### Mock Environment
+## Mock Environment
 
 Functions that use Date() can be difficult to test. Get around this by injecting a mock environment into your tests which will always return a known date.
 
@@ -59,7 +57,7 @@ Example files:
 - [DateExamplesViewController.swift](https://github.com/BevTheDev/Paradigms/blob/master/Paradigms/View%20Controllers/Examples/DateExamplesViewController.swift)
 - [DateTests.swift](https://github.com/BevTheDev/Paradigms/blob/master/ParadigmsTests/Dates/DateTests.swift)
 
-### Stub Network Requests
+## Stub Network Requests
 
 Use a pod like [OHHTTPStubs](https://github.com/AliSoftware/OHHTTPStubs) to stub network requests so you can test outgoing request format and response handling.
 
