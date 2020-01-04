@@ -8,13 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		20E92F31745F35926D931CA0 /* Pods_Paradigms.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32B4D6BBDF26EAB5353E7EC4 /* Pods_Paradigms.framework */; };
+		967D5BF223A99D3A00031097 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967D5BF123A99D3A00031097 /* WebService.swift */; };
+		967D5BF523A9B36800031097 /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967D5BF323A9B36800031097 /* PostsViewController.swift */; };
+		967D5BF623A9B36800031097 /* PostsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 967D5BF423A9B36800031097 /* PostsViewController.xib */; };
+		967D5BF823A9B4EF00031097 /* WebService+Posts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967D5BF723A9B4EF00031097 /* WebService+Posts.swift */; };
+		967D5BFA23A9B54100031097 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967D5BF923A9B54100031097 /* Post.swift */; };
 		96867C18237B4E7800221C73 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96867C17237B4E7800221C73 /* Environment.swift */; };
 		96867C1C237B502400221C73 /* MockEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96867C1B237B502400221C73 /* MockEnvironment.swift */; };
 		96867C1E237B510400221C73 /* Date+Creation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96867C1D237B510400221C73 /* Date+Creation.swift */; };
 		96867C20237B519100221C73 /* DateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96867C1F237B519100221C73 /* DateTests.swift */; };
 		96867C22237B51ED00221C73 /* BaseTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96867C21237B51ED00221C73 /* BaseTestCase.swift */; };
 		96A679A1237B2B320011D883 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A679A0237B2B320011D883 /* AppDelegate.swift */; };
-		96A679AB237B2B320011D883 /* Paradigms.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 96A679A9237B2B320011D883 /* Paradigms.xcdatamodeld */; };
 		96A679AD237B2B330011D883 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96A679AC237B2B330011D883 /* Assets.xcassets */; };
 		96A679D7237B33DC0011D883 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A679D5237B33DC0011D883 /* HomeViewController.swift */; };
 		96A679D8237B33DC0011D883 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96A679D6237B33DC0011D883 /* HomeViewController.xib */; };
@@ -24,6 +28,12 @@
 		96A679E4237B42510011D883 /* DateExamplesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A679E2237B42510011D883 /* DateExamplesViewController.swift */; };
 		96A679E5237B42510011D883 /* DateExamplesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96A679E3237B42510011D883 /* DateExamplesViewController.xib */; };
 		96A679EB237B438C0011D883 /* DateFormatter+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A679EA237B438C0011D883 /* DateFormatter+Convenience.swift */; };
+		96BDE17823C0F74C00E5D541 /* PostsVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BDE17723C0F74C00E5D541 /* PostsVCTests.swift */; };
+		96BDE17A23C0FE3C00E5D541 /* posts_response.json in Resources */ = {isa = PBXBuildFile; fileRef = 96BDE17923C0FE3C00E5D541 /* posts_response.json */; };
+		96BDE17C23C0FE9700E5D541 /* NetworkMocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BDE17B23C0FE9700E5D541 /* NetworkMocker.swift */; };
+		96BDE17E23C0FEA400E5D541 /* NetworkMocker+Posts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BDE17D23C0FEA400E5D541 /* NetworkMocker+Posts.swift */; };
+		96BDE18123C1323400E5D541 /* RequestSignature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BDE18023C1323400E5D541 /* RequestSignature.swift */; };
+		96BDE18323C1435E00E5D541 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BDE18223C1435E00E5D541 /* Constants.swift */; };
 		BEEA56E837E819E65AC8F546 /* Pods_ParadigmsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02909CCB2BFBD8F5601C9955 /* Pods_ParadigmsTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +55,11 @@
 		32B4D6BBDF26EAB5353E7EC4 /* Pods_Paradigms.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Paradigms.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5382985449E29F21A17B5870 /* Pods-ParadigmsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParadigmsUITests.release.xcconfig"; path = "Target Support Files/Pods-ParadigmsUITests/Pods-ParadigmsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		6B2117BADE80CFB9162B3AD9 /* Pods-ParadigmsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParadigmsUITests.debug.xcconfig"; path = "Target Support Files/Pods-ParadigmsUITests/Pods-ParadigmsUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		967D5BF123A99D3A00031097 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		967D5BF323A9B36800031097 /* PostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
+		967D5BF423A9B36800031097 /* PostsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostsViewController.xib; sourceTree = "<group>"; };
+		967D5BF723A9B4EF00031097 /* WebService+Posts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WebService+Posts.swift"; sourceTree = "<group>"; };
+		967D5BF923A9B54100031097 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		96867C17237B4E7800221C73 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		96867C1B237B502400221C73 /* MockEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockEnvironment.swift; sourceTree = "<group>"; };
 		96867C1D237B510400221C73 /* Date+Creation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Creation.swift"; sourceTree = "<group>"; };
@@ -52,7 +67,6 @@
 		96867C21237B51ED00221C73 /* BaseTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTestCase.swift; sourceTree = "<group>"; };
 		96A6799D237B2B320011D883 /* Paradigms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Paradigms.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96A679A0237B2B320011D883 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		96A679AA237B2B320011D883 /* Paradigms.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Paradigms.xcdatamodel; sourceTree = "<group>"; };
 		96A679AC237B2B330011D883 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		96A679B1237B2B330011D883 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96A679B6237B2B330011D883 /* ParadigmsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParadigmsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,6 +81,12 @@
 		96A679E2237B42510011D883 /* DateExamplesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExamplesViewController.swift; sourceTree = "<group>"; };
 		96A679E3237B42510011D883 /* DateExamplesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateExamplesViewController.xib; sourceTree = "<group>"; };
 		96A679EA237B438C0011D883 /* DateFormatter+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Convenience.swift"; sourceTree = "<group>"; };
+		96BDE17723C0F74C00E5D541 /* PostsVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsVCTests.swift; sourceTree = "<group>"; };
+		96BDE17923C0FE3C00E5D541 /* posts_response.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = posts_response.json; sourceTree = "<group>"; };
+		96BDE17B23C0FE9700E5D541 /* NetworkMocker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMocker.swift; sourceTree = "<group>"; };
+		96BDE17D23C0FEA400E5D541 /* NetworkMocker+Posts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMocker+Posts.swift"; sourceTree = "<group>"; };
+		96BDE18023C1323400E5D541 /* RequestSignature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestSignature.swift; sourceTree = "<group>"; };
+		96BDE18223C1435E00E5D541 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D57BB4194252106699463FB3 /* Pods-Paradigms.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Paradigms.release.xcconfig"; path = "Target Support Files/Pods-Paradigms/Pods-Paradigms.release.xcconfig"; sourceTree = "<group>"; };
 		D5F9C977558B09FD8AB48DE2 /* Pods-Paradigms.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Paradigms.debug.xcconfig"; path = "Target Support Files/Pods-Paradigms/Pods-Paradigms.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -112,6 +132,15 @@
 				5382985449E29F21A17B5870 /* Pods-ParadigmsUITests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		967D5BF023A99CB100031097 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				967D5BF123A99D3A00031097 /* WebService.swift */,
+				967D5BF723A9B4EF00031097 /* WebService+Posts.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		96867C16237B4E6800221C73 /* Environment */ = {
@@ -162,6 +191,7 @@
 		96A6799F237B2B320011D883 /* Paradigms */ = {
 			isa = PBXGroup;
 			children = (
+				967D5BF023A99CB100031097 /* Networking */,
 				96867C16237B4E6800221C73 /* Environment */,
 				96A679E6237B43330011D883 /* Utility */,
 				96A679D4237B33BB0011D883 /* View Controllers */,
@@ -176,6 +206,8 @@
 		96A679B9237B2B330011D883 /* ParadigmsTests */ = {
 			isa = PBXGroup;
 			children = (
+				96BDE17623C0F73200E5D541 /* Posts */,
+				96BDE17523C0F3C300E5D541 /* Network Mocks */,
 				96867C1A237B500500221C73 /* Dates */,
 				96867C19237B4FFB00221C73 /* MockObjects */,
 				96A679BC237B2B330011D883 /* Info.plist */,
@@ -196,7 +228,7 @@
 		96A679D3237B31F40011D883 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				96A679A9237B2B320011D883 /* Paradigms.xcdatamodeld */,
+				967D5BF923A9B54100031097 /* Post.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -235,6 +267,8 @@
 			children = (
 				96A679E2237B42510011D883 /* DateExamplesViewController.swift */,
 				96A679E3237B42510011D883 /* DateExamplesViewController.xib */,
+				967D5BF323A9B36800031097 /* PostsViewController.swift */,
+				967D5BF423A9B36800031097 /* PostsViewController.xib */,
 			);
 			path = Examples;
 			sourceTree = "<group>";
@@ -243,6 +277,7 @@
 			isa = PBXGroup;
 			children = (
 				96A679E7237B433A0011D883 /* Extensions */,
+				96BDE18223C1435E00E5D541 /* Constants.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -254,6 +289,33 @@
 				96867C1D237B510400221C73 /* Date+Creation.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		96BDE17523C0F3C300E5D541 /* Network Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				96BDE17F23C0FEAC00E5D541 /* Response Json */,
+				96BDE17B23C0FE9700E5D541 /* NetworkMocker.swift */,
+				96BDE17D23C0FEA400E5D541 /* NetworkMocker+Posts.swift */,
+				96BDE18023C1323400E5D541 /* RequestSignature.swift */,
+			);
+			path = "Network Mocks";
+			sourceTree = "<group>";
+		};
+		96BDE17623C0F73200E5D541 /* Posts */ = {
+			isa = PBXGroup;
+			children = (
+				96BDE17723C0F74C00E5D541 /* PostsVCTests.swift */,
+			);
+			path = Posts;
+			sourceTree = "<group>";
+		};
+		96BDE17F23C0FEAC00E5D541 /* Response Json */ = {
+			isa = PBXGroup;
+			children = (
+				96BDE17923C0FE3C00E5D541 /* posts_response.json */,
+			);
+			path = "Response Json";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -344,6 +406,7 @@
 			files = (
 				96A679DF237B3E5C0011D883 /* ExampleCell.xib in Resources */,
 				96A679E5237B42510011D883 /* DateExamplesViewController.xib in Resources */,
+				967D5BF623A9B36800031097 /* PostsViewController.xib in Resources */,
 				96A679AD237B2B330011D883 /* Assets.xcassets in Resources */,
 				96A679DA237B34B40011D883 /* LaunchScreen.xib in Resources */,
 				96A679D8237B33DC0011D883 /* HomeViewController.xib in Resources */,
@@ -354,6 +417,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96BDE17A23C0FE3C00E5D541 /* posts_response.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,13 +510,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				96A679EB237B438C0011D883 /* DateFormatter+Convenience.swift in Sources */,
+				967D5BFA23A9B54100031097 /* Post.swift in Sources */,
 				96A679DE237B3E5C0011D883 /* ExampleCell.swift in Sources */,
 				96A679E4237B42510011D883 /* DateExamplesViewController.swift in Sources */,
 				96867C18237B4E7800221C73 /* Environment.swift in Sources */,
+				967D5BF823A9B4EF00031097 /* WebService+Posts.swift in Sources */,
+				967D5BF523A9B36800031097 /* PostsViewController.swift in Sources */,
 				96867C1E237B510400221C73 /* Date+Creation.swift in Sources */,
+				967D5BF223A99D3A00031097 /* WebService.swift in Sources */,
 				96A679A1237B2B320011D883 /* AppDelegate.swift in Sources */,
-				96A679AB237B2B320011D883 /* Paradigms.xcdatamodeld in Sources */,
 				96A679D7237B33DC0011D883 /* HomeViewController.swift in Sources */,
+				96BDE18323C1435E00E5D541 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,7 +530,11 @@
 			files = (
 				96867C1C237B502400221C73 /* MockEnvironment.swift in Sources */,
 				96867C22237B51ED00221C73 /* BaseTestCase.swift in Sources */,
+				96BDE18123C1323400E5D541 /* RequestSignature.swift in Sources */,
+				96BDE17823C0F74C00E5D541 /* PostsVCTests.swift in Sources */,
+				96BDE17C23C0FE9700E5D541 /* NetworkMocker.swift in Sources */,
 				96867C20237B519100221C73 /* DateTests.swift in Sources */,
+				96BDE17E23C0FEA400E5D541 /* NetworkMocker+Posts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -707,19 +779,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		96A679A9237B2B320011D883 /* Paradigms.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				96A679AA237B2B320011D883 /* Paradigms.xcdatamodel */,
-			);
-			currentVersion = 96A679AA237B2B320011D883 /* Paradigms.xcdatamodel */;
-			path = Paradigms.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 96A67995237B2B320011D883 /* Project object */;
 }

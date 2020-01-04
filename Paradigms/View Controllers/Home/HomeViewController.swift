@@ -10,11 +10,15 @@ import UIKit
 
 enum ExampleCells: Int, CaseIterable {
     case dates
+    case jsonRetrieval
     
     var title: String {
         switch self {
         case .dates:
             return "Dates"
+            
+        case .jsonRetrieval:
+            return "JSON Retrieval"
         }
     }
 }
@@ -61,7 +65,11 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         switch ExampleCells.allCases[indexPath.item] {
-        case .dates: navigationController?.pushViewController(DateExamplesViewController(), animated: true)
+        case .dates:
+            navigationController?.pushViewController(DateExamplesViewController(), animated: true)
+            
+        case .jsonRetrieval:
+            navigationController?.pushViewController(PostsViewController(), animated: true)
         }
     }
 }
