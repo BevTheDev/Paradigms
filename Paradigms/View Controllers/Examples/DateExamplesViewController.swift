@@ -22,7 +22,7 @@ class DateExamplesViewController: UIViewController {
         
         super.viewDidLoad()
         
-        isoFormatLabel.text = DateFormatter.iso8601.string(from: Env.date)
-        friendlyFormatLabel.text = DateFormatter.monthDayYear.string(from: Env.date)
+        isoFormatLabel.text = DateFormatter.iso8601.string(from: Env.date())
+        friendlyFormatLabel.text = DateFormatter.monthDayYear.string(from: Env.date())
     }
 }

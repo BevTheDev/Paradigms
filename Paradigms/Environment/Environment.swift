@@ -10,7 +10,7 @@ import Foundation
 
 struct Environment {
     
-    var date: Date = Date()
+    var date: () -> Date = Date.init
 }
 
 var Env = Environment()
