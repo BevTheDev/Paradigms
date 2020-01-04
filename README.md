@@ -1,7 +1,7 @@
 # Paradigms
 
 <p align="left">
- <a href="https://travis-ci.org/BevTheDev/Paradigms" target="_blank"><img src="https://travis-ci.org/BevTheDev/Paradigms.svg?branch=master" alt="Build Status"></a> 
+ <a href="https://travis-ci.com/BevTheDev/Paradigms/" target="_blank"><img src="https://travis-ci.com/BevTheDev/Paradigms.svg?branch=master" alt="Build Status"></a> 
 </p>
 
 Example coding/testing patterns to make your life easier.
