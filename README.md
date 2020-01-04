@@ -4,11 +4,33 @@
 
 Example coding/testing patterns to make your life easier.
 
+- [Development Patterns](#development-patterns)
+  - [Version Files](#version-files)
+  - [Write Unit Tests](#write-unit-tests)
+  - [Use Continuous Integration](#use-continuous-integration)
 - [Test Patterns](#test-patterns)
   - [Mock Environment](#mock-environment)
   - [Stub Network Requests](#stub-network-requests)
 
 -----
+
+# Development Patterns
+
+## Version Files
+
+Use a Gemfile and Podfile to make installation and setup easy.
+Commit your .ruby-version, Gemfile.lock, and Podfile.lock to keep the whole team's local setup in sync.
+
+## Write Unit Tests
+
+Unit tests drastically improve a project's maintainability. A well-tested project is:
+- Easy to update - because you can quickly verify your changes didn't break anything.
+- Easy to read - testable code tends to be very modular because simple input/output functions are easier to test. Forcing yourself to keep your functions simple now will make them much easier to understand and update later.
+- Way less stressful - you can press that "Release" button with confidence when you have a full suite of tests confirming that your app functions as expected.
+
+## Use Continuous Integration
+
+This project uses Travis CI to run tests on every merge to master. Another option is to set up a Fastlane/Jenkins combo to automatically run tests, build a release, and deploy to TestFlight on every merge.
 
 # Test Patterns
 
@@ -56,6 +78,7 @@ Example files:
 - [MockEnvironment.swift](https://github.com/BevTheDev/Paradigms/blob/master/ParadigmsTests/MockObjects/MockEnvironment.swift)
 - [DateExamplesViewController.swift](https://github.com/BevTheDev/Paradigms/blob/master/Paradigms/View%20Controllers/Examples/DateExamplesViewController.swift)
 - [DateTests.swift](https://github.com/BevTheDev/Paradigms/blob/master/ParadigmsTests/Dates/DateTests.swift)
+
 
 ## Stub Network Requests
 
