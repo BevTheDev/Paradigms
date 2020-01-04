@@ -1,4 +1,4 @@
-source 'https://github.com/CocoaPods/Specs.git'
+source 'https://cdn.cocoapods.org/'
 
 platform :ios, '12.0'
 
@@ -47,11 +47,6 @@ target 'Paradigms' do
   target 'ParadigmsTests' do
     inherit! :search_paths
     pod 'MetovaTestKit'
-    common_test_pods
-  end
-
-  target 'ParadigmsUITests' do
-    inherit! :search_paths
     common_test_pods
   end
 end
