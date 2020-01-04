@@ -33,6 +33,7 @@
 		96BDE17C23C0FE9700E5D541 /* NetworkMocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BDE17B23C0FE9700E5D541 /* NetworkMocker.swift */; };
 		96BDE17E23C0FEA400E5D541 /* NetworkMocker+Posts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BDE17D23C0FEA400E5D541 /* NetworkMocker+Posts.swift */; };
 		96BDE18123C1323400E5D541 /* RequestSignature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BDE18023C1323400E5D541 /* RequestSignature.swift */; };
+		96BDE18323C1435E00E5D541 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BDE18223C1435E00E5D541 /* Constants.swift */; };
 		BEEA56E837E819E65AC8F546 /* Pods_ParadigmsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02909CCB2BFBD8F5601C9955 /* Pods_ParadigmsTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -85,6 +86,7 @@
 		96BDE17B23C0FE9700E5D541 /* NetworkMocker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMocker.swift; sourceTree = "<group>"; };
 		96BDE17D23C0FEA400E5D541 /* NetworkMocker+Posts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMocker+Posts.swift"; sourceTree = "<group>"; };
 		96BDE18023C1323400E5D541 /* RequestSignature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestSignature.swift; sourceTree = "<group>"; };
+		96BDE18223C1435E00E5D541 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D57BB4194252106699463FB3 /* Pods-Paradigms.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Paradigms.release.xcconfig"; path = "Target Support Files/Pods-Paradigms/Pods-Paradigms.release.xcconfig"; sourceTree = "<group>"; };
 		D5F9C977558B09FD8AB48DE2 /* Pods-Paradigms.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Paradigms.debug.xcconfig"; path = "Target Support Files/Pods-Paradigms/Pods-Paradigms.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -275,6 +277,7 @@
 			isa = PBXGroup;
 			children = (
 				96A679E7237B433A0011D883 /* Extensions */,
+				96BDE18223C1435E00E5D541 /* Constants.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -517,6 +520,7 @@
 				967D5BF223A99D3A00031097 /* WebService.swift in Sources */,
 				96A679A1237B2B320011D883 /* AppDelegate.swift in Sources */,
 				96A679D7237B33DC0011D883 /* HomeViewController.swift in Sources */,
+				96BDE18323C1435E00E5D541 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

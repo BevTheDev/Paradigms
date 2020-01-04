@@ -12,7 +12,7 @@ extension WebService {
     
     static func getPosts(completion: @escaping (WebResponse<[Post]>) -> Void) {
         
-        let url = "https://jsonplaceholder.typicode.com/posts"
+        let url = Constants.Networking.samplePosts
         
         WebService.sendRequest(urlString: url, method: .get) { response in
             
