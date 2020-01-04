@@ -11,28 +11,38 @@ import XCTest
 @testable import Paradigms
 
 class PostsVCTests: BaseTestCase {
-    
-    var testVC: MockPostsVC!
-    
-    override func setUp() {
-        
-        super.setUp()
-        
-        testVC = MockPostsVC()
-//        testVC.loadView()
-    }
 
-    func testJsonParsing() {
+    func testPostParsing() {
+        
+        let mockVC = MockPostsVC()
         
         let updateExpectation = expectation(description: "Posts should be loaded")
-        testVC.postsUpdatedExpectation = updateExpectation
+        mockVC.postsUpdatedExpectation = updateExpectation
         
-        testVC.viewDidLoad()
+        mockVC.loadPosts()
         
         wait(for: [updateExpectation], timeout: 1)
         
-        XCTAssertEqual(testVC.posts.count, 3)
+        XCTAssertEqual(mockVC.posts.count, 3)
+        XCTAssertEqual(mockVC.posts.first?.title, "title from file")
+        XCTAssertEqual(mockVC.posts.first?.body, "body from file")
+        XCTAssertEqual(mockVC.posts.first?.userId, 1)
     }
+    
+    func testDataLoadRefreshesTable() {
+        
+        let testVC = PostsViewController()
+        testVC.loadView()
+        XCTAssertEqual(testVC.tableView(testVC.tableView, numberOfRowsInSection: 0), 0)
+        
+        testVC.posts = [Post(title: "test", userId: 1, body: "test body")]
+        
+        XCTAssertEqual(testVC.tableView(testVC.tableView, numberOfRowsInSection: 0), 1)
+        let cell = testVC.tableView(testVC.tableView, cellForRowAt: IndexPath(row: 0, section: 0))
+        XCTAssertEqual(cell.textLabel?.text, "test")
+    }
+    
+    // MARK: - Mock Objects
     
     class MockPostsVC: PostsViewController {
         

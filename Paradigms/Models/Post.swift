@@ -11,4 +11,10 @@ class Post: Decodable {
     let title: String
     let userId: Int
     let body: String
+    
+    init(title: String, userId: Int, body: String) {
+        self.title = title
+        self.userId = userId
+        self.body = body
+    }
 }
