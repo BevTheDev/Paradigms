@@ -14,7 +14,15 @@ class NetworkMocker {
     
     static func stubAllRequestsWithFailure() {
         
-        OHHTTPStubs.stubRequests(passingTest: stubAllTestBlock(), withStubResponse: standardStubResponse())
+        let stubAllBlock: OHHTTPStubsTestBlock = { _ -> Bool in
+            return true
+        }
+        
+        let standardResponseBlock: OHHTTPStubsResponseBlock = { _ -> OHHTTPStubsResponse in
+             return OHHTTPStubsResponse(jsonObject: ["stub": "This request has been stubbed"], statusCode: 500, headers: nil)
+        }
+        
+        OHHTTPStubs.stubRequests(passingTest: stubAllBlock, withStubResponse: standardResponseBlock)
     }
     
     static func removeAllStubs() {
@@ -28,26 +36,56 @@ class NetworkMocker {
         
         stubAllRequestsWithFailure()
         
-        
+        stubPostsRequest()
     }
     
     // MARK: - Stubs
     
-    static func stubAllTestBlock() -> OHHTTPStubsTestBlock {
+    static func stub(
+        forPath path: String,
+        httpMethod: HTTPMethod = .get,
+        responseFileName: String,
+        responseStatus: Int = 200,
+        responseTime: TimeInterval = 0
+        ) {
         
-        let testBlock: OHHTTPStubsTestBlock = { _ -> Bool in
-            return true
+        let stubSignature = RequestSignature(path: path, method: httpMethod)
+        
+        let testBlock = compareRequestSignatures(stubSignature)
+        
+        let responseStub: OHHTTPStubsResponseBlock = { _ in
+            
+            let response = OHHTTPStubsResponse(
+                fileAtPath: attemptToGetFilePath(withFilename: responseFileName),
+                statusCode: Int32(responseStatus),
+                headers: [:]
+            )
+            
+            response.responseTime = responseTime
+            return response
         }
         
-        return testBlock
+        OHHTTPStubs.stubRequests(passingTest: testBlock, withStubResponse: responseStub)
     }
     
-    static func standardStubResponse() -> OHHTTPStubsResponseBlock {
+    // MARK: - Helpers
+    
+    static private func attemptToGetFilePath(withFilename filename: String) -> String {
         
-        let responseBlock: OHHTTPStubsResponseBlock = { _ -> OHHTTPStubsResponse in
-             return OHHTTPStubsResponse(jsonObject: ["stub": "This request has been stubbed"], statusCode: 500, headers: nil)
+        guard let filePath = OHPathForFileInBundle(filename, Bundle(for: self)) else {
+            fatalError("File with filename not found: \(filename)")
         }
         
-        return responseBlock
+        return filePath
+    }
+    
+    static private func compareRequestSignatures(_ stubSignature: RequestSignature) -> OHHTTPStubsTestBlock {
+        
+        return { request in
+            
+            let requestSignature = RequestSignature(request: request)
+            
+            return requestSignature == stubSignature
+        }
     }
 }
