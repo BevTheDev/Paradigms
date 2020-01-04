@@ -18,6 +18,14 @@ class BaseTestCase: XCTestCase {
         
         super.setUp()
         
+        NetworkMocker.addDefaultStubs()
         Env = .mock
+    }
+    
+    override func tearDown() {
+        
+        NetworkMocker.removeAllStubs()
+        
+        super.tearDown()
     }
 }

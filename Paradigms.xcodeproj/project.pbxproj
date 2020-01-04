@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		20E92F31745F35926D931CA0 /* Pods_Paradigms.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32B4D6BBDF26EAB5353E7EC4 /* Pods_Paradigms.framework */; };
-		775A072F6383965E6648E9B2 /* Pods_ParadigmsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09FA7C58C395F32F578D7E7D /* Pods_ParadigmsUITests.framework */; };
 		967D5BF223A99D3A00031097 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967D5BF123A99D3A00031097 /* WebService.swift */; };
 		967D5BF523A9B36800031097 /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967D5BF323A9B36800031097 /* PostsViewController.swift */; };
 		967D5BF623A9B36800031097 /* PostsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 967D5BF423A9B36800031097 /* PostsViewController.xib */; };
@@ -29,6 +28,10 @@
 		96A679E4237B42510011D883 /* DateExamplesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A679E2237B42510011D883 /* DateExamplesViewController.swift */; };
 		96A679E5237B42510011D883 /* DateExamplesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96A679E3237B42510011D883 /* DateExamplesViewController.xib */; };
 		96A679EB237B438C0011D883 /* DateFormatter+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A679EA237B438C0011D883 /* DateFormatter+Convenience.swift */; };
+		96BDE17823C0F74C00E5D541 /* PostsVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BDE17723C0F74C00E5D541 /* PostsVCTests.swift */; };
+		96BDE17A23C0FE3C00E5D541 /* posts_response.json in Resources */ = {isa = PBXBuildFile; fileRef = 96BDE17923C0FE3C00E5D541 /* posts_response.json */; };
+		96BDE17C23C0FE9700E5D541 /* NetworkMocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BDE17B23C0FE9700E5D541 /* NetworkMocker.swift */; };
+		96BDE17E23C0FEA400E5D541 /* NetworkMocker+Posts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BDE17D23C0FEA400E5D541 /* NetworkMocker+Posts.swift */; };
 		BEEA56E837E819E65AC8F546 /* Pods_ParadigmsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02909CCB2BFBD8F5601C9955 /* Pods_ParadigmsTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +79,10 @@
 		96A679E2237B42510011D883 /* DateExamplesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExamplesViewController.swift; sourceTree = "<group>"; };
 		96A679E3237B42510011D883 /* DateExamplesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateExamplesViewController.xib; sourceTree = "<group>"; };
 		96A679EA237B438C0011D883 /* DateFormatter+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Convenience.swift"; sourceTree = "<group>"; };
+		96BDE17723C0F74C00E5D541 /* PostsVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsVCTests.swift; sourceTree = "<group>"; };
+		96BDE17923C0FE3C00E5D541 /* posts_response.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = posts_response.json; sourceTree = "<group>"; };
+		96BDE17B23C0FE9700E5D541 /* NetworkMocker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMocker.swift; sourceTree = "<group>"; };
+		96BDE17D23C0FEA400E5D541 /* NetworkMocker+Posts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkMocker+Posts.swift"; sourceTree = "<group>"; };
 		D57BB4194252106699463FB3 /* Pods-Paradigms.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Paradigms.release.xcconfig"; path = "Target Support Files/Pods-Paradigms/Pods-Paradigms.release.xcconfig"; sourceTree = "<group>"; };
 		D5F9C977558B09FD8AB48DE2 /* Pods-Paradigms.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Paradigms.debug.xcconfig"; path = "Target Support Files/Pods-Paradigms/Pods-Paradigms.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -195,6 +202,8 @@
 		96A679B9237B2B330011D883 /* ParadigmsTests */ = {
 			isa = PBXGroup;
 			children = (
+				96BDE17623C0F73200E5D541 /* Posts */,
+				96BDE17523C0F3C300E5D541 /* Network Mocks */,
 				96867C1A237B500500221C73 /* Dates */,
 				96867C19237B4FFB00221C73 /* MockObjects */,
 				96A679BC237B2B330011D883 /* Info.plist */,
@@ -275,6 +284,32 @@
 				96867C1D237B510400221C73 /* Date+Creation.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		96BDE17523C0F3C300E5D541 /* Network Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				96BDE17F23C0FEAC00E5D541 /* Response Json */,
+				96BDE17B23C0FE9700E5D541 /* NetworkMocker.swift */,
+				96BDE17D23C0FEA400E5D541 /* NetworkMocker+Posts.swift */,
+			);
+			path = "Network Mocks";
+			sourceTree = "<group>";
+		};
+		96BDE17623C0F73200E5D541 /* Posts */ = {
+			isa = PBXGroup;
+			children = (
+				96BDE17723C0F74C00E5D541 /* PostsVCTests.swift */,
+			);
+			path = Posts;
+			sourceTree = "<group>";
+		};
+		96BDE17F23C0FEAC00E5D541 /* Response Json */ = {
+			isa = PBXGroup;
+			children = (
+				96BDE17923C0FE3C00E5D541 /* posts_response.json */,
+			);
+			path = "Response Json";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -376,6 +411,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96BDE17A23C0FE3C00E5D541 /* posts_response.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,7 +523,10 @@
 			files = (
 				96867C1C237B502400221C73 /* MockEnvironment.swift in Sources */,
 				96867C22237B51ED00221C73 /* BaseTestCase.swift in Sources */,
+				96BDE17823C0F74C00E5D541 /* PostsVCTests.swift in Sources */,
+				96BDE17C23C0FE9700E5D541 /* NetworkMocker.swift in Sources */,
 				96867C20237B519100221C73 /* DateTests.swift in Sources */,
+				96BDE17E23C0FEA400E5D541 /* NetworkMocker+Posts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
