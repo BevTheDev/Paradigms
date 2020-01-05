@@ -11,6 +11,7 @@ Example coding/testing patterns to make your life easier.
 - [Test Patterns](#test-patterns)
   - [Mock Environment](#mock-environment)
   - [Stub Network Requests](#stub-network-requests)
+  - [Waiting for Expectations](#waiting-for-expectations)
 
 -----
 
@@ -122,4 +123,55 @@ OHHTTPStubs.removeAllStubs()
 Example files:
 - [NetworkMocker.swift](https://github.com/BevTheDev/Paradigms/blob/master/ParadigmsTests/Network%20Mocks/NetworkMocker.swift)
 - [NetworkMocker+Posts.swift](https://github.com/BevTheDev/Paradigms/blob/master/ParadigmsTests/Network%20Mocks/NetworkMocker%2BPosts.swift)
+- [PostsVCTests.swift](https://github.com/BevTheDev/Paradigms/blob/master/ParadigmsTests/Posts/PostsVCTests.swift)
+
+## Waiting for Expectations
+
+When testing a function with an async component (such as a network request), use an XCTestExpectation (rather than a wait) to hold execution until the async feature has completed.
+
+To use expectations, you will first need to use dependency injection to insert a mock object which can hold the reference to the expectation, and fulfill it at the appropriate time.
+
+Consider this mock from PostsVCTests.swift:
+
+```swift
+class MockPostsVC: PostsViewController {
+
+    var postsUpdatedExpectation: XCTestExpectation?
+
+    var mockPosts: [Post] = []
+
+    override var posts: [Post] {
+        get {
+            return mockPosts
+        }
+        set {
+            mockPosts = newValue
+            postsUpdatedExpectation?.fulfill()
+        }
+    }
+}
+```
+
+In PostsViewController, the `posts` array updates when the network call in `loadPosts()` completes. We want to test that loadPosts() can successfully parse Post objects from the url response and pass those into the posts array. So I created MockPostsVC as a subclass of PostsViewController and overrode `var posts`. The functionality in the override is similar to parent class, but I have removed the `tableview.reloadData()` line (UI updates are not needed for this test), and added `postsUpdatedExpectation?.fulfill()` to fulfill our expectation whenever the posts are updated.
+
+Now we can write our test like this:
+
+```swift
+let mockVC = MockPostsVC()
+
+let updateExpectation = expectation(description: "Posts should be loaded")
+mockVC.postsUpdatedExpectation = updateExpectation
+
+mockVC.loadPosts()
+
+wait(for: [updateExpectation], timeout: 1)
+```
+
+Instantiate a MockPostsVC, create the expectation, set it on mockVC, call our async method, then wait for the fulfill. Afterward, we can continue our test knowing that loadPosts() has completed.
+
+Note that XCTest provides both a `waitForExpectations(timeout:handler:)` and a `wait(for:timeout:)`.
+
+The first waits for _any_ expectation to be fulfilled, while the second waits for a specific expectation (or array of expectations). Using the second is recommended to prevent accidental fulfillment of expectations by other mock objects in your test environment.
+
+Example files:
 - [PostsVCTests.swift](https://github.com/BevTheDev/Paradigms/blob/master/ParadigmsTests/Posts/PostsVCTests.swift)
